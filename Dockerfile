@@ -19,6 +19,3 @@ RUN apt-get update && \
     Rscript -e "renv::restore()" && \
     # Fix permissions 
     chown -R ${USERNAME}:${GROUPNAME} ${HOME}
-    
-# Fix permissions
-RUN chmod -R 777 /ESA-Nowcasting-2023
