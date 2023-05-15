@@ -1,14 +1,6 @@
 FROM rocker/rstudio:4.2.2
 
 WORKDIR /ESA-Nowcasting-2023
-
-# System libs
-RUN apt-get update && \
-    apt-get install -y \
-            git \
-            libcurl4-openssl-dev \
-            libglpk-dev \
-            wget
             
 # Fetch Onyxia's init script
 RUN wget https://raw.githubusercontent.com/InseeFrLab/images-datascience/main/scripts/onyxia-init.sh -O /opt/onyxia-init.sh && \
